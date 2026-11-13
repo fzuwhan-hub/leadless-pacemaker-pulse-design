@@ -77,7 +77,7 @@ def main():
 
     knee = min(front, key=distances.__getitem__)
     families = Counter(shapes[candidate]["family"] for candidate in front)
-    print(f"{len(mapping):,} nominal parameter combinations map to {len(shapes)} shapes.")
+    print(f"{len(mapping):,} nominal parameter combinations map to {len(shapes)} candidate records.")
     print(f"Nondominated shapes: {len(front)} ({', '.join(f'{name}: {n}' for name, n in sorted(families.items()))})")
     print(f"Nominal Knee Point: {knee} (normalized distance {distances[knee]:.8f})")
     for figure in (5, 6):
